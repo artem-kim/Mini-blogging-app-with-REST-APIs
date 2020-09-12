@@ -1,6 +1,6 @@
 """
-This is the people module and supports all the REST actions for the
-people data
+This is the notes module and supports all the REST actions for the
+note data
 """
 
 from flask import make_response, abort

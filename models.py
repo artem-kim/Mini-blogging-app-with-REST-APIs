@@ -33,7 +33,7 @@ class Note(db.Model):
 
 class PersonSchema(ma.SQLAlchemyAutoSchema):
     def __init__(self, **kwargs):
-        super().__init__(strict=True, **kwargs)
+        super().__init__(**kwargs)
 
     class Meta:
         model = Person
@@ -49,7 +49,7 @@ class PersonNoteSchema(ma.SQLAlchemyAutoSchema):
     """
 
     def __init__(self, **kwargs):
-        super().__init__(strict=True, **kwargs)
+        super().__init__(**kwargs)
 
     note_id = fields.Int()
     person_id = fields.Int()
@@ -59,7 +59,7 @@ class PersonNoteSchema(ma.SQLAlchemyAutoSchema):
 
 class NoteSchema(ma.SQLAlchemyAutoSchema):
     def __init__(self, **kwargs):
-        super().__init__(strict=True, **kwargs)
+        super().__init__(**kwargs)
 
     class Meta:
         model = Note
@@ -75,7 +75,7 @@ class NotePersonSchema(ma.SQLAlchemyAutoSchema):
     """
 
     def __init__(self, **kwargs):
-        super().__init__(strict=True, **kwargs)
+        super().__init__(**kwargs)
 
     person_id = fields.Int()
     lname = fields.Str()
